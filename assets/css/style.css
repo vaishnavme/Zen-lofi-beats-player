@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --white-color: #ffffff;
+}
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    width: 100%;
+    height: 100vh;
+      background-image: linear-gradient(
+          to right bottom, 
+          #118ab2, 
+          #0e92b9, 
+          #0b99c1, 
+          #07a1c8,
+          #03a9cf, 
+          #37b0d8,
+          #51b8e1, 
+          #66bfe9, 
+          #8cc7f2, 
+          #accff8,
+          #c7d8fc, 
+          #dee2ff
+    );
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+    color: var(--white-color);
+    margin: 1rem 0 1rem 0;
+}
+.heading {
+    font-size: 32px;
+}
+/* end common style */
+
+#home .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+}
+.collection {
+    width: 50%;
+    flex: 1;
+    margin-top: 1.5rem;
+}
+.playbox {
+    flex: 1;
+}
+.lead {
+    max-width: 600px;
+    font-weight: 400;
+    color: #15253a;
+    letter-spacing: 0.5px;
+    line-height: 1.2rem;
+}
+.musicbox {
+    margin-top: 1rem;
+}
+.m-box {
+    display: inline-block;
+}
+.fluid-img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    cursor: pointer;
+    transition: ease-in-out 400ms;
+}
+.fluid-img:hover {
+    transform: scale(0.95);
+}
+.playbox {
+    margin: 0.5rem auto;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #c7d8fc8c;
+}
+nav {
+    display: block;
+    margin: 3rem auto;
+}
+ul li{
+    list-style: none;
+    display: inline;
+    margin: 1rem;
+    padding: 1rem;
+}
+ul li a {
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: var(--white-color);
+    transition: all 250ms;
+}
+ul li a:hover {
+    background-color: #c7d8fc8c;
+}
+.controller {
+    margin: 2.5rem auto;
+    width: 100%;
+    max-width: 450px;
+    min-height: 500px;
+}
