@@ -119,7 +119,7 @@ ul li a:hover {
     display: flex;
     border: 3px solid #37b0d8;
     border-top: 3px solid #0254ec;
-    animation: anticlock 6s infinite linear;
+   
 }
 .circle2 {
     width: 150px;
@@ -130,6 +130,12 @@ ul li a:hover {
     border-top: 3px solid #66bfe9;
     align-self: center;
     margin: auto;
+    
+}
+.circle.animate {
+    animation: anticlock 6s infinite linear;
+}
+.circle2.animate {
     animation: clockwise 3s infinite linear;
 }
 .play-btn {
