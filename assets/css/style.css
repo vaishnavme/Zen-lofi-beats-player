@@ -53,9 +53,6 @@ h1, h2, h3, h4, h5, h6 {
     flex: 1;
     margin-top: 1.5rem;
 }
-.playbox {
-    flex: 1;
-}
 .lead {
     max-width: 600px;
     font-weight: 400;
@@ -74,12 +71,14 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 280px;
     height: auto;
     cursor: pointer;
-    transition: ease-in-out 400ms;
+    transition: ease-in-out 500ms;
+    border-radius: 5px;
 }
 .fluid-img:hover {
-    transform: scale(0.95);
+    transform: scale(0.96);
 }
 .playbox {
+    flex: 1;
     margin: 0.5rem auto;
     text-align: center;
     border-radius: 8px;
@@ -100,7 +99,7 @@ ul li a {
     padding: 8px 15px;
     border-radius: 5px;
     color: var(--white-color);
-    transition: all 250ms;
+    transition: all 300ms;
 }
 ul li a:hover {
     background-color: #c7d8fc8c;
@@ -108,6 +107,42 @@ ul li a:hover {
 .controller {
     margin: 2.5rem auto;
     width: 100%;
-    max-width: 450px;
+    max-width: 400px;
     min-height: 500px;
+}
+.circle {
+    width: 200px;
+    height: 200px;
+    background-color: #222427;
+    border-radius: 50%;
+    margin: 2rem auto;
+    display: flex;
+    border: 3px solid #37b0d8;
+    border-top: 3px solid #0254ec;
+    animation: anticlock 6s infinite linear;
+}
+.circle2 {
+    width: 100px;
+    height: 100px;
+    background-color: #252629;
+    border-radius: 50%;
+    border: 3px solid #282529;
+    border-top: 3px solid #66bfe9;
+    align-self: center;
+    margin: auto;
+    animation: clockwise 3s infinite linear;
+}
+@keyframes anticlock {
+    from {
+        transform: rotate(360deg);
+    } to {
+        transform: rotate(0deg);
+    }
+}
+@keyframes clockwise {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(360deg);
+    }
 }
