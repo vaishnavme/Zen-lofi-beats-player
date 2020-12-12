@@ -111,8 +111,8 @@ ul li a:hover {
     min-height: 500px;
 }
 .circle {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     background-color: #222427;
     border-radius: 50%;
     margin: 2rem auto;
@@ -122,8 +122,8 @@ ul li a:hover {
     animation: anticlock 6s infinite linear;
 }
 .circle2 {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     background-color: #252629;
     border-radius: 50%;
     border: 3px solid #282529;
@@ -131,6 +131,13 @@ ul li a:hover {
     align-self: center;
     margin: auto;
     animation: clockwise 3s infinite linear;
+}
+.play-btn {
+    width: 100%;
+    max-width: 50px;
+    height: auto;
+    margin: auto;
+    cursor: pointer;
 }
 @keyframes anticlock {
     from {
@@ -146,3 +153,4 @@ ul li a:hover {
         transform: rotate(360deg);
     }
 }
+
