@@ -126,6 +126,12 @@ ul li a:hover {
     margin: auto;
     
 }
+.circle2 .fluid-img{
+    width: 100%;
+    max-width: 140px;
+    height: auto;
+    border-radius: 50%;
+}
 #song-name{
     color: #15253a;
     font-weight: 400;
@@ -166,8 +172,12 @@ ul li a:hover {
         flex-direction: column-reverse;
     }
     .collection {
-        width: 100%;
+        width: 90%;
         flex: 1;
         margin: 1.5rem auto;
+    }
+    .playbox {
+        flex: 1;
+        width: 90%;
     }
 }

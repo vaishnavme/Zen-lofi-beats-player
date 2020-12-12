@@ -10,6 +10,7 @@ const circleSm = document.querySelector("#circle-sm");
 // playing song
 const songName = document.querySelector("#song-name");
 const audio = document.querySelector("#audio");
+const coverArt = document.querySelector("#cover");
 const musicbox = document.querySelector("#musicbox");
 
 // control button images
@@ -45,6 +46,7 @@ function createPlayList() {
     songList.forEach((song) => {
         let h3 = createEle('h3');
         let li = createEle('li');
+
         li.classList.add("track-item");
         h3.innerText = song.name;
         append(li,h3);
@@ -57,7 +59,9 @@ let songIndex = 0;
 // preloaded song
 loadMusic(songList[songIndex]);
 
-function loadMusic(pos) {
+
+function loadMusic() {
+    coverArt.src = songList[songIndex].cover;
     songName.innerText = songList[songIndex].name;
     audio.src = songList[songIndex].source;
 }
