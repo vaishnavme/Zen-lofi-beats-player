@@ -138,12 +138,13 @@ ul li a:hover {
 .circle2.animate {
     animation: clockwise 3s infinite linear;
 }
-.play-btn {
+.media-btn {
     width: 100%;
     max-width: 50px;
     height: auto;
     margin: auto;
     cursor: pointer;
+    margin: 1rem;
 }
 @keyframes anticlock {
     from {

@@ -1,16 +1,23 @@
-const controlButton = document.querySelector("#play-stop");
+// media controllers
+const playPause = document.querySelector("#play-stop");
+const backward = document.querySelector("#backward");
+const forward = document.querySelector("#forward");
 
+// record player animation
 const circleBig = document.querySelector("#circle-bg");
 const circleSm = document.querySelector("#circle-sm");
 
+// playing song
 const songName = document.querySelector("#song-name");
 const audio = document.querySelector("#audio");
 
 // control button images
 let playImg = "./assets/images/play.svg";
 let pauseImg = "./assets/images/pause.svg";
-// default control image
-controlButton.src = playImg;
+
+// default controls
+playPause.src = playImg;
+let isPlaying = true;
 
 const songList = [
     {
@@ -25,42 +32,50 @@ const songList = [
     }
 ];
 
-let index = 0;
+let songIndex = 0;
 // preloaded song
-loadSong(songList[index]);
+loadMusic(songList[songIndex]);
 
-function loadSong() {
-    songName.innerText = songList[index].name;
-    audio.src = songList[index].source;
+function loadMusic(pos) {
+    songName.innerText = songList[songIndex].name;
+    audio.src = songList[songIndex].source;
 }
-//default
-let isPlaying = true;
 
-function play() {
-    controlButton.src = pauseImg;
+    function playSong() {
+    playPause.src = pauseImg;
     circleBig.classList.add("animate");
     circleSm.classList.add("animate");
-    // play song
+
     audio.play();
 }
 
-function pause() {
-    controlButton.src = playImg;
+function pauseSong() {
+    playPause.src = playImg;
     circleBig.classList.remove("animate");
     circleSm.classList.remove("animate");
 
-    // pause song
     audio.pause();
 }
 
+function nextPlay() {
+    songIndex++;
+    loadMusic(songList[songIndex]);
+    playSong()
+}
+
+function backPlay() {
+    songIndex--;
+    loadMusic(songList[songIndex]);
+    playSong()
+}
 function playHandler() {
     isPlaying = !isPlaying;
     //console.log("Change: ",isPlaying)
-    isPlaying ? pause() : play();
+    isPlaying ? pauseSong() : playSong();
 }
 
 
 // player event 
-controlButton.addEventListener("click", playHandler);
-mBox.addEventListener("click", playAnySong);
-coverArtHandler();
+playPause.addEventListener("click", playHandler);
+backward.addEventListener("click", backPlay);
+forward.addEventListener("click", nextPlay);
