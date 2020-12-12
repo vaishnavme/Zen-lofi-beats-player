@@ -10,6 +10,7 @@ const circleSm = document.querySelector("#circle-sm");
 // playing song
 const songName = document.querySelector("#song-name");
 const audio = document.querySelector("#audio");
+const musicbox = document.querySelector("#musicbox");
 
 // control button images
 let playImg = "./assets/images/play.svg";
@@ -31,6 +32,25 @@ const songList = [
         cover: "./assets/images/chillhop-2.jpg"
     }
 ];
+// helper function
+function createEle(ele) {
+    return document.createElement(ele);
+}
+function append(parent, child) {
+    return parent.append(child);
+}
+const ul = createEle('ul')
+function createPlayList() {
+    songList.forEach((song) => {
+        let h3 = createEle('h3');
+        let li = createEle('li');
+        li.classList.add("track-item");
+        h3.innerText = song.name;
+        append(li,h3);
+        append(ul,li)
+    })
+    append(musicbox, ul);
+}
 
 let songIndex = 0;
 // preloaded song
@@ -79,3 +99,5 @@ function playHandler() {
 playPause.addEventListener("click", playHandler);
 backward.addEventListener("click", backPlay);
 forward.addEventListener("click", nextPlay);
+
+createPlayList()

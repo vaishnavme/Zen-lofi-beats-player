@@ -10,7 +10,6 @@
 body {
     font-family: 'Josefin Sans', sans-serif;
     width: 100%;
-    height: 100vh;
       background-image: linear-gradient(
           to right bottom, 
           #118ab2, 
@@ -63,19 +62,10 @@ h1, h2, h3, h4, h5, h6 {
 .musicbox {
     margin-top: 1rem;
 }
-.m-box {
-    display: inline-block;
-}
-.fluid-img {
-    width: 100%;
-    max-width: 280px;
-    height: auto;
-    cursor: pointer;
-    transition: ease-in-out 500ms;
-    border-radius: 5px;
-}
-.fluid-img:hover {
-    transform: scale(0.96);
+.hor {
+    margin: 1rem 0 1rem 0;
+    max-width: 500px;
+    background-color: #c7d8fc;
 }
 .playbox {
     flex: 1;
@@ -132,6 +122,10 @@ ul li a:hover {
     margin: auto;
     
 }
+#song-name{
+    color: #15253a;
+    font-weight: 400;
+}
 .circle.animate {
     animation: anticlock 6s infinite linear;
 }
@@ -160,4 +154,16 @@ ul li a:hover {
         transform: rotate(360deg);
     }
 }
-
+@media (max-width: 900px) {
+    #home .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column-reverse;
+    }
+    .collection {
+        width: 100%;
+        flex: 1;
+        margin: 1.5rem auto;
+    }
+}
