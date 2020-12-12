@@ -39,6 +39,7 @@ function createEle(ele) {
 function append(parent, child) {
     return parent.append(child);
 }
+// creating track list
 const ul = createEle('ul')
 function createPlayList() {
     songList.forEach((song) => {
@@ -61,7 +62,7 @@ function loadMusic(pos) {
     audio.src = songList[songIndex].source;
 }
 
-    function playSong() {
+function playSong() {
     playPause.src = pauseImg;
     circleBig.classList.add("animate");
     circleSm.classList.add("animate");
@@ -79,12 +80,18 @@ function pauseSong() {
 
 function nextPlay() {
     songIndex++;
+    if(songIndex > songList.length - 1) {
+        songIndex = 0;
+    }
     loadMusic(songList[songIndex]);
     playSong()
 }
 
 function backPlay() {
     songIndex--;
+    if(songIndex < 0) {
+        songIndex = songList.length - 1;
+    }
     loadMusic(songList[songIndex]);
     playSong()
 }
