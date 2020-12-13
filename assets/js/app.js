@@ -24,12 +24,27 @@ let isPlaying = true;
 const songList = [
     {
         name: "Travel Love Beats",
-        source: "./assets/music/Lofi1.mp3",
+        source: "./assets/music/Travel Love Beats.mp3",
         cover: "./assets/images/chillhop.jpg"
     },
     {
         name: "Night Sky Unreated",
-        source: "./assets/music/Lofi2.mp3",
+        source: "./assets/music/Night Sky.mp3",
+        cover: "./assets/images/chillhop-2.jpg"
+    },
+    {
+        name: "Be a Music",
+        source: "./assets/music/Be a Music.mp3",
+        cover: "./assets/images/chillhop-3.jpg"
+    },
+    {
+        name: "Slow Day",
+        source: "./assets/music/Slow Day.mp3",
+        cover: "./assets/images/chillhop-4.jpg"
+    },
+    {
+        name: "Carti Mangolia",
+        source: "./assets/music/Carti mangolia.mp3",
         cover: "./assets/images/chillhop-2.jpg"
     }
 ];
